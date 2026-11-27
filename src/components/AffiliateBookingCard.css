@@ -1,0 +1,170 @@
+.booking-experiences-section {
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.experiences-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.partner-experience-card {
+  position: relative;
+  height: 380px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.partner-experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-bg-image {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.card-bg-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  background-color: var(--primary-color, #102a43);
+  color: transparent;
+}
+
+.partner-experience-card:hover .card-bg-image img {
+  transform: scale(1.06);
+}
+
+.overlay-grad {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(to top, rgba(16, 24, 32, 0.95) 20%, rgba(16, 24, 32, 0.4) 70%, rgba(16, 24, 32, 0.2));
+}
+
+.card-content-overlay {
+  position: relative;
+  z-index: 10;
+  height: 100%;
+  padding: 32px;
+}
+
+/* Brands & Badges */
+.card-header-brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-logo {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.klook-logo {
+  color: #FF5B00; /* Klook Orange */
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.gyg-logo {
+  color: #FF4A00; /* GYG Red-Orange */
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.partner-verified-badge {
+  background: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Body Info */
+.card-partner-heading {
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  margin-bottom: 8px;
+}
+
+.partner-text-desc {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.experience-features-row {
+  flex-wrap: wrap;
+}
+
+.feat-pill {
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* CTA Buttons */
+.affiliate-cta-btn {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.klook-btn {
+  background: #FF5B00;
+  color: #FFFFFF;
+}
+
+.klook-btn:hover {
+  background: #e04f00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 91, 0, 0.3);
+}
+
+.gyg-btn {
+  background: #FFFFFF;
+  color: #101820;
+}
+
+.gyg-btn:hover {
+  background: #f3f3f3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .experiences-grid {
+    grid-template-columns: 1fr;
+  }
+  .partner-experience-card {
+    height: 320px;
+  }
+  .card-content-overlay {
+    padding: 24px;
+  }
+}
